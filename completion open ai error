@@ -1,0 +1,30 @@
+python3 openai_test_disclosure_prompt.py 
+0.6941345827185026
+program started:
+1: 0.7700633445342324
+2: 0.7354286818751081
+3: 0.7635232992041536
+1: 0.7728246673791738
+2: 0.7368570264144428
+Traceback (most recent call last):
+  File "/Users/shrikantpatil/PP/PythonProject1/openai_test_disclosure_prompt.py", line 107, in <module>
+    similarity_score = embedding_test(sentence2, disc3)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shrikantpatil/PP/PythonProject1/embbedings.py", line 8, in embedding_test
+    resp = openai.Embedding.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/openai/api_resources/embedding.py", line 33, in create
+    response = super().create(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/usr/local/lib/python3.11/site-packages/openai/api_requestor.py", line 763, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.RateLimitError: Rate limit reached for default-global-with-image-limits in organization org-3YRwV2W7lRbXrMXh0rrvDnL6 on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method.
+shrikant:PythonProject1 shrikantpatil$ 
